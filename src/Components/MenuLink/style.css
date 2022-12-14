@@ -1,0 +1,14 @@
+.menu-navegacao__link {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--preto);
+    transition: .2s;
+}
+
+.menu-navegacao__link:hover {
+    color: var(--cinza);
+}
+
+.menu-navegacao__link-sublinhado {
+    text-decoration: underline;
+}
