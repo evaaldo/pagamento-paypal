@@ -1,22 +1,17 @@
-import './Styles/GlobalStyles.css'
-import React from "react"
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
-import PagamentoCabelo from './Pages/PagamentoBarba';
-import PagamentoBarba from './Pages/PagamentoCabelo';
-import PagamentoCabeloBarba from './Pages/PagamentoCabeloBarba';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './Styles/EstilosGlobais.css'
+import Home from './Pages/Home/index.jsx'
+import SobreMim from './Pages/SobreMim';
 
 function App() {
   return (
-    <Router>
-      <Link to='./Pages/PagamentoCabelo'>Pacote cabelo</Link>
-      <Link to='./Pages/PagamentoBarba'>Pacote barba</Link>
-      <Link to='./Pages/PagamentoCabeloBarba'>Pacote cabelo e barba</Link>
+    <BrowserRouter>
       <Routes>
-        <Route path='./Pages/PagamentoCabelo' element={<PagamentoCabelo/>}/>
-        <Route path='./Pages/PagamentoBarba' element={<PagamentoBarba/>}/>
-        <Route path='./Pages/PagamentoCabeloBarba' element={<PagamentoCabeloBarba/>}/>
+        <Route path='/' element={<Home/>} />
+        <Route path='/SobreMim' element={<SobreMim/>} />
+        <Route path='*' element={<h1>Página não encontrada</h1>} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
