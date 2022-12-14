@@ -1,7 +1,11 @@
+import './style.css'
+
 const SobreMim = () => {
 
     return(
-        <h1>Sobre mim</h1>
+        <div className='sobre-mim'>
+            <h1 className='sobre-mim__titulo'>Sobre mim</h1>
+        </div>
     )
 
 }
